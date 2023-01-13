@@ -24,19 +24,19 @@ justify-content: center;
 
 .top-bar{
 display: grid;
-grid-template-columns: 1fr 5rem;
+grid-template-columns: 1fr 5rem 1fr;
 align-items: center;
-gap: 10rem;
 background: #6B7A8F;
 }
 
 #search-input{
+width:100% ;
 font-size: 1.5rem;
 border-radius: 5px;
 width: 600px;
-border: transparent;
-margin-left: 2rem;
+border: none;
 caret-color: silver;
+outline: none;
 }
 
 #cart-icon{
@@ -103,4 +103,16 @@ mix-blend-mode: multiply;
     background: rgb(0, 153, 255);
     height: 1rem;
     border-radius: 10px;
+}
+
+.items::-webkit-scrollbar{
+    display: none;
+}
+
+#search-btn{
+    font-size: 20px;
+}
+
+.search-bar{
+
 }

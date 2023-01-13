@@ -76,21 +76,21 @@
 // select items
  const items = document.querySelector('.items');
 const searchInput = document.querySelector('#search-input');
-
+const gasProducts = document.querySelectorAll('#description');
 
 
 // search items
+// const searchGas = () =>{
+// const searchQuery = searchInput.value.toLowerCase();
 
-searchInput.addEventListener('keyup', (e)=>{
-const value = e.target.value;
-const searchQuery = value.toLowerCase();
+// for(let i=0; i<gasProducts.length; i++) {
+//   let match = gasProducts[i].match(searchQuery);
+// if(match) {
+//   gasProducts.style.display = 'block';
+// }
+// }}
 
-for(const product of products){
-if(String(product).includes(searchQuery)){
-  String(product).style.display = 'block';
-}
-}
-})
+
 
 //load items
  window.addEventListener('DOMContentLoaded', () =>{
