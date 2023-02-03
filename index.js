@@ -109,3 +109,11 @@ if(!search[i].innerHTML.toLowerCase().includes(searchQuery)){
    search[i].style.display = 'list-item';
 }
 }}
+
+// search for product on enter keypress
+searchInput.addEventListener('keypress', (e) => {
+if(e.key === 'Enter'){
+  e.preventDefault;
+  searchGas();
+}
+})
