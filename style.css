@@ -71,7 +71,7 @@ mix-blend-mode: multiply;
     padding-top: 2rem;
 }
 
-#description{
+.description{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,18 +81,18 @@ mix-blend-mode: multiply;
     text-decoration: none;
 }
 
-#description p{
+.description p{
     padding: 2rem;
     color: rgb(43, 42, 42);
     font-weight: bold;
 }
 
-#description h3{
+.description h3{
     padding: 2rem;
     color: rgb(236, 9, 9);
 }
 
-#description img{
+.description img{
     width: 300px;
     height: 300px;
     object-fit: contain;
@@ -114,5 +114,5 @@ mix-blend-mode: multiply;
 }
 
 .search-bar{
-
+margin-left: 2rem;
 }

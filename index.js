@@ -76,21 +76,6 @@
 // select items
  const items = document.querySelector('.items');
 const searchInput = document.querySelector('#search-input');
-const gasProducts = document.querySelectorAll('#description');
-
-
-// search items
-// const searchGas = () =>{
-// const searchQuery = searchInput.value.toLowerCase();
-
-// for(let i=0; i<gasProducts.length; i++) {
-//   let match = gasProducts[i].match(searchQuery);
-// if(match) {
-//   gasProducts.style.display = 'block';
-// }
-// }}
-
-
 
 //load items
  window.addEventListener('DOMContentLoaded', () =>{
@@ -100,7 +85,7 @@ displayGasItems(products);
  function displayGasItems(gasItems){
 let displayProducts = gasItems.map((product) => {
         // console.log(product);
-        return `<div id="description">
+        return `<div class="description">
         <img src=${product.img} alt="gas image" loading="lazy">
         <div id="info">
         <h3>${product.title}</h3>
@@ -112,3 +97,15 @@ let displayProducts = gasItems.map((product) => {
     displayProducts = displayProducts.join('');
     items.innerHTML = displayProducts;
  };
+
+//  Search for products
+const searchGas = () =>{
+const searchQuery = searchInput.value.toLowerCase();
+let search = document.getElementsByClassName('description');
+for(let i = 0; i < search.length; i++) {
+if(!search[i].innerHTML.toLowerCase().includes(searchQuery)){
+  search[i].style.display = 'none';
+}else{
+   search[i].style.display = 'list-item';
+}
+}}
