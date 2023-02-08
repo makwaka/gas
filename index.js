@@ -97,9 +97,6 @@ let displayProducts = gasItems.map((product) => {
     displayProducts = displayProducts.join('');
     items.innerHTML = displayProducts;
  };
-
-const carousel = document.querySelector('.not');
-
 //  Search for products
 const searchGas = () =>{
 const searchQuery = searchInput.value.toLowerCase();
@@ -115,7 +112,6 @@ displayGasItems(products);
    search[i].style.display = 'list-item';
 }
 }}
-
 // search for product on enter keypress
 searchInput.addEventListener('keypress', (e) => {
 if(e.key === 'Enter'){
