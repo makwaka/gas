@@ -98,6 +98,8 @@ let displayProducts = gasItems.map((product) => {
     items.innerHTML = displayProducts;
  };
 
+const carousel = document.querySelector('.not');
+
 //  Search for products
 const searchGas = () =>{
 const searchQuery = searchInput.value.toLowerCase();
@@ -105,6 +107,10 @@ let search = document.getElementsByClassName('description');
 for(let i = 0; i < search.length; i++) {
 if(!search[i].innerHTML.toLowerCase().includes(searchQuery)){
   search[i].style.display = 'none';
+  // alert('Not Found');
+  // return;
+}else if(searchQuery === ''){
+displayGasItems(products);
 }else{
    search[i].style.display = 'list-item';
 }
@@ -116,4 +122,9 @@ if(e.key === 'Enter'){
   e.preventDefault;
   searchGas();
 }
-})
+});
+
+// search for product on enter keyup
+searchInput.addEventListener('keyup', (e) => {
+  searchGas();
+});
